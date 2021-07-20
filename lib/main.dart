@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './activity.dart';
 
 const header1 = TextStyle(fontSize: 18, color: Colors.black38);
 
@@ -51,7 +52,7 @@ class BuildSheet extends StatelessWidget {
       child: DraggableScrollableSheet(
         initialChildSize: 0.81,
         minChildSize: 0.8,
-        maxChildSize: 0.81,
+        maxChildSize: 0.94,
         builder: (_, controller) => Container(
           decoration: BoxDecoration(
             color: Colors.white,
@@ -92,371 +93,38 @@ class BuildSheet extends StatelessWidget {
               SizedBox(height: 5),
 
               //Main content
-              Padding(
-                padding: const EdgeInsets.only(left: 5),
-                child: SizedBox(
-                  height: 200,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        top: 5,
-                        left: 10,
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 200,
-                              width: 5,
-                              color: Colors.black12,
-                              margin: const EdgeInsets.only(left: 5, right: 5),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all(
-                            width: 2,
-                            color: const Color.fromRGBO(185, 128, 30, 1),
-                          ),
-                        ),
-                        child: Container(
-                          width: 31,
-                          height: 31,
-                          padding: const EdgeInsets.all(1),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            border: Border.all(
-                              width: 8,
-                              color: const Color.fromRGBO(245, 177, 60, 1),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 40,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('08 : 00 14/05/2021', style: header1),
-                              Text('Chuyên viên Phòng CNTT', style: header1),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 3),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      'Nguyễn Đức Cảnh',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 5),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(225, 232, 253, 1),
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                            horizontal: 12,
-                                            vertical: 3,
-                                          ),
-                                          child: Text(
-                                            "Duyệt",
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Color.fromRGBO(
-                                                  120, 153, 250, 1),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 5, top: 5),
-                                child: SizedBox(
-                                  width: 300,
-                                  height: 35,
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width: 2,
-                                        height: 35,
-                                        color: const Color.fromRGBO(
-                                            65, 105, 146, 1),
-                                      ),
-                                      SizedBox(width: 10),
-                                      SizedBox(
-                                        width: 250,
-                                        child: Text(
-                                          "Tờ trình đầy đủ nội dung rồi em, ổn rồi đó",
-                                          style: TextStyle(
-                                            fontSize: 17,
-                                            color: const Color.fromRGBO(
-                                                65, 105, 146, 1),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              Activity(
+                date: '10: 00 14/05/2021',
+                name: 'Nguyễn Minh Tâm',
+                comment: 'Ok ổn rồi đó',
+                passed: true,
+                position: 'Phó ban',
+                lastNode: false,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 5),
-                child: SizedBox(
-                  height: 200,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        top: 5,
-                        left: 10,
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 200,
-                              width: 5,
-                              color: Colors.black12,
-                              margin: const EdgeInsets.only(left: 5, right: 5),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all(
-                            width: 2,
-                            color: const Color.fromRGBO(185, 128, 30, 1),
-                          ),
-                        ),
-                        child: Container(
-                          width: 31,
-                          height: 31,
-                          padding: const EdgeInsets.all(1),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            border: Border.all(
-                              width: 8,
-                              color: const Color.fromRGBO(245, 177, 60, 1),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 40,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('10 : 00 14/05/2021', style: header1),
-                              Text('Chuyên viên Phòng CNTT', style: header1),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 3),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      'Nguyễn Công Thịnh',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 5),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(225, 232, 253, 1),
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                            horizontal: 12,
-                                            vertical: 3,
-                                          ),
-                                          child: Text(
-                                            "Duyệt",
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Color.fromRGBO(
-                                                  120, 153, 250, 1),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 5, top: 5),
-                                child: SizedBox(
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width: 2,
-                                        height: 20,
-                                        color: const Color.fromRGBO(
-                                            65, 105, 146, 1),
-                                      ),
-                                      SizedBox(width: 10),
-                                      SizedBox(
-                                        width: 250,
-                                        child: Text(
-                                          "Giấy tờ đầy đủ.",
-                                          style: TextStyle(
-                                            fontSize: 17,
-                                            color: const Color.fromRGBO(
-                                                65, 105, 146, 1),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              Activity(
+                date: '10: 00 17/05/2021',
+                name: 'Nguyễn Minh Tài',
+                comment: 'Chưa ổn đâu.',
+                passed: false,
+                position: 'Trưởng ban',
+                lastNode: false,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 5),
-                child: SizedBox(
-                  height: 200,
-                  child: Stack(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all(
-                            width: 2,
-                            color: const Color.fromRGBO(198, 61, 64, 1),
-                          ),
-                        ),
-                        child: Container(
-                          width: 31,
-                          height: 31,
-                          padding: const EdgeInsets.all(1),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            border: Border.all(
-                              width: 8,
-                              color: const Color.fromRGBO(231, 118, 143, 1),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 40,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('10 : 00 14/05/2021', style: header1),
-                              Text('Trưởng Phòng CNTT', style: header1),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 3),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      'Phạm Hoàng Phong',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 5),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(250, 227, 228, 1),
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                            horizontal: 12,
-                                            vertical: 3,
-                                          ),
-                                          child: Text(
-                                            "Không Duyệt",
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Color.fromRGBO(
-                                                  229, 89, 97, 1),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 5, top: 5),
-                                child: SizedBox(
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width: 2,
-                                        height: 20,
-                                        color: const Color.fromRGBO(
-                                            65, 105, 146, 1),
-                                      ),
-                                      SizedBox(width: 10),
-                                      SizedBox(
-                                        width: 250,
-                                        child: Text(
-                                          "Chưa đúng quy trình.",
-                                          style: TextStyle(
-                                            fontSize: 17,
-                                            color: const Color.fromRGBO(
-                                                65, 105, 146, 1),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              Activity(
+                date: '12: 00 18/05/2021',
+                name: 'Nguyễn Trọng Tâm',
+                comment: 'Đúng quy trình rồi. Chỉ cần thêm tài liệu là được',
+                passed: true,
+                position: 'Phó Giám Đốc',
+                lastNode: false,
+              ),
+              Activity(
+                date: '15: 00 18/05/2021',
+                name: 'Nguyễn Trọng Đức',
+                comment:
+                    'Đã ổn. Mai lên họp tại công ty lúc 12 giờ ngày 19/05/2021. Nhớ đem theo các tài liệu cần thiết',
+                passed: true,
+                position: 'Giám Đốc',
+                lastNode: true,
               ),
             ],
           ),
